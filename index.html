@@ -1,0 +1,114 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<title>9月22日蒋颂&张秀玥婚礼邀请函</title>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.2/fullpage.min.css">
+		<link rel="stylesheet" type="text/css" href="/jQuery-Sakura/jquery-sakura.min.css">
+		<link href='http://cdn.webfont.youziku.com/webfonts/nomal/123277/149/5b9fb1b9f629d90f5cc59b24.css' rel='stylesheet' type='text/css' />
+		<style type="text/css">
+			.fp-tableCell {
+				background: linear-gradient(to bottom,rgba(255,255,255,0),#FDF7F7 35%),url(header.jpg) no-repeat;
+				background-size: 100% ;
+				vertical-align: bottom;
+			}
+			.section { 
+				text-align: center;
+			}
+			h1{
+				font-size: 4em;
+				margin-bottom: 1.2em;
+			}
+			.cover1 {
+				vertical-align: bottom;
+				font-size: larger;
+			}
+			.signature {
+				margin-top: 5em;
+				margin-bottom: 3em;
+				font-family: "Courier New";
+				font-size: smaller;
+			}
+			[data-anchor="page1"] {
+				vertical-align: bottom;	
+			}
+			#baidu-map{
+				height:300px;width:100%;
+			}
+			@font-face{font-style:normal;font-family:'HuaKangShouJin';src:url('font/HuaKangShouJinTiJianW3-1.ttc') format('truetype');}
+			.post-title{font-family:"HuaKangShouJin","Microsoft YaHei","Roboto",sans-serif;font-weight:bold;}
+			.photo img {
+				border: none;
+				width: 12em;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="fullpage" >
+			<div class="section cover">
+				<div class="cover1">
+					<!-- <img src="header.jpg"> -->
+					<h1 class="css148cf783f21e18d">邀请函</h1>
+					<h2 >蒋颂 & 张秀玥</h2>
+					<p class="post-title">2018年9月22日 17时28分</p>
+					<p class="post-title">苏州东恒盛酒店五楼</p>
+					<p class="post-title">诚邀您见证我们的幸福时刻</p>
+					<p class="signature">Produced by Semmy&Cindy</p>
+				</div>
+			</div>
+			<div class="section">
+				<div class="photo">
+					<img src="/img/we2.jpg">
+				</div>
+				<p class="post-title">地址：江苏省苏州市吴江区文苑路88号</p>
+				<div id="baidu-map"></div>
+			</div>
+		</div>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.2/fullpage.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.2/fullpage.extensions.min.js"></script>
+		
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.2/vendors/easings.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.2/vendors/scrolloverflow.min.js"></script>
+		<script type="text/javascript" src="/jQuery-Sakura/jquery-sakura.js"></script>
+		<script type="text/javascript">
+			function initialize() {  
+			  	var map = new BMap.Map("baidu-map");            // 创建Map实例
+			  	map.centerAndZoom(new BMap.Point(134.30813,36.30249), 11);
+				var local = new BMap.LocalSearch(map, {
+					renderOptions: {map: map}
+				});
+				local.search("苏州东恒盛酒店");
+			}  
+
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
+					//options here
+					autoScrolling:true,
+					scrollHorizontally: true,
+					licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
+					anchors: ['cover', 'map'],
+			        sectionsColor: ['#FDF7F7', '#FDFDFD'],
+			        scrollBar: true
+				});
+
+				//methods
+				$.fn.fullpage.setAllowScrolling(true);
+
+				$('.cover').sakura('start', {
+			        blowAnimations: ['blow-soft-left', 'blow-medium-left'],
+			        maxSize: 15,         // Maximum petal size
+        			minSize: 7,
+        			newOn:150,
+        			fallSpeed: 1
+			    });
+
+				//load baidu
+				var script = document.createElement("script");  
+			  	script.src = "http://api.map.baidu.com/api?v=2.0&ak=3cf0db35515a7378cb2d3a33d47ebfba&callback=initialize";
+			  	document.body.appendChild(script);
+			});
+		</script>
+		<audio id="audio-player" src="天門 - 桜花抄.mp3" autoplay loop></audio>
+	</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "wedding-invit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "fullpage": "^1.4.2",
+    "jquery": "^3.3.1"
+  }
+}
