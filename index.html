@@ -81,6 +81,14 @@
 				local.search("苏州东恒盛酒店");
 			}  
 
+			function audioAutoPlay() {
+		        var audio = document.getElementById('audio');
+		            audio.play();
+		        document.addEventListener("WeixinJSBridgeReady", function () {
+		            audio.play();
+		        }, false);
+		    }
+
 			$(document).ready(function() {
 				$('#fullpage').fullpage({
 					//options here
@@ -107,6 +115,8 @@
 				var script = document.createElement("script");  
 			  	script.src = "http://api.map.baidu.com/api?v=2.0&ak=3cf0db35515a7378cb2d3a33d47ebfba&callback=initialize";
 			  	document.body.appendChild(script);
+
+			  	audioAutoPlay();
 			});
 		</script>
 		<audio id="audio-player" src="天門 - 桜花抄.mp3" autoplay loop></audio>
